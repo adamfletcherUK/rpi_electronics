@@ -20,11 +20,27 @@ class ControlStepper(Controller):
         if self.keypad_val == "B":
             self.direction = stepper.BACKWARD
             os.environ['DIRECTION'] = 'BACKWARD'
-        if self.keypad_val == '1':
-            os.environ['SPEED'] = '0.1'
-        if self.keypad_val == '2':
-            os.environ['SPEED'] = '0.01'
 
+        if self.keypad_val == '1':
+            os.environ['SPEED'] = '0.45'
+        if self.keypad_val == '2':
+            os.environ['SPEED'] = '0.04'
+        if self.keypad_val == '3':
+            os.environ['SPEED'] = '0.035'
+        if self.keypad_val == '4':
+            os.environ['SPEED'] = '0.03'
+        if self.keypad_val == '5':
+            os.environ['SPEED'] = '0.025'
+        if self.keypad_val == '6':
+            os.environ['SPEED'] = '0.02'
+        if self.keypad_val == '7':
+            os.environ['SPEED'] = '0.015'
+        if self.keypad_val == '8':
+            os.environ['SPEED'] = '0.01'
+        if self.keypad_val == '9':
+            os.environ['SPEED'] = '0.005'
+        if self.keypad_val == '0':
+            os.environ['SPEED'] = '0'
         self.speed = float(os.environ['SPEED'])
 
     def test_run_stepper_motor(self):

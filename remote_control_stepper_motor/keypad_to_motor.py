@@ -1,4 +1,3 @@
-import time
 import os
 from remote_control_stepper_motor.controller_info import Controller
 from remote_control_stepper_motor.control_stepper import ControlStepper
