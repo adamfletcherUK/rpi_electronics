@@ -10,7 +10,6 @@ class KeypadToMotor(Controller):
         self.input_keypad = KeypadRead()
 
 
-
     def run(self):
         self.input_keypad.setupChannels()
         os.environ['DIRECTION'] = 'FORWARD'
