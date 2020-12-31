@@ -15,7 +15,7 @@ class KeypadRead(Controller):
         for c_pin in [self.C1, self.C2, self.C3, self.C4]:
             GPIO.setup(c_pin, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 
-    def readColumn(self, line, characters):
+    def readColumn(self, line: int, characters: list) -> str:
         keypad_val = None
         GPIO.output(line, GPIO.HIGH)
         if GPIO.input(self.C1):
@@ -30,7 +30,7 @@ class KeypadRead(Controller):
 
         return keypad_val
 
-    def readRow(self):
+    def readRow(self) -> str:
         number_val = False
         L1val = self.readColumn(self.L1, ["1", "2", "3", "A"])
         L2val = self.readColumn(self.L2, ["4", "5", "6", "B"])

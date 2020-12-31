@@ -25,9 +25,9 @@ class LCDScreen(Controller):
         return [lcd_rs, lcd_en, lcd_d4, lcd_d5, lcd_d6, lcd_d7,
                 lcd_columns, lcd_rows, lcd_backlight]
 
-    def displayMessage(self):
+    def testDisplayMessage(self):
         self.LCD.message = "Hello\nHumans"
 
 if __name__ == '__main__':
-    LCDScreen().displayMessage()
+    LCDScreen().testDisplayMessage()
 
