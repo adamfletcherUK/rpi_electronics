@@ -15,5 +15,3 @@ class Controller:
         self.ir_input_pin = 14
         self.L1, self.L2, self.L3, self.L4 = 5, 6, 13, 19
         self.C1, self.C2, self.C3, self.C4 = 12, 16, 20, 21
-
-

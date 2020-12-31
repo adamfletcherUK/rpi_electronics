@@ -28,6 +28,13 @@ class LCDScreen(Controller):
     def testDisplayMessage(self):
         self.LCD.message = "Hello\nHumans"
 
+    def DisplayMessage(self, direction: str, speed: str):
+        message_str: str = f"{direction}\nSpeed: {speed}"
+        self.LCD.message = message_str
+
+    #TODO: doesn't flip from Forward to Backward very well
+    #TODO: need to clear the screen before outputting new value
+
 if __name__ == '__main__':
     LCDScreen().testDisplayMessage()
 
