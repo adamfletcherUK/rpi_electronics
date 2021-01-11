@@ -33,7 +33,7 @@ class LCDScreen(Controller):
         self.LCD.message = message_str
 
     #TODO: doesn't flip from Forward to Backward very well
-    #TODO: need to clear the screen before outputting new value
+    #TODO: need to clear the screen before outputting new value ## lcd.clear()
 
 if __name__ == '__main__':
     LCDScreen().testDisplayMessage()
